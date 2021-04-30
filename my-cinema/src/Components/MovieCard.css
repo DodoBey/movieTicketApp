@@ -1,0 +1,28 @@
+.movieCard{
+    width: 20%;
+    margin: 1% auto;
+    padding: 1px;
+    transition: 0.5s ease;
+}
+
+
+.moviePoster img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.movieCard:hover{
+    
+    transform: scale(1.03);
+}
+
+.movieBanner{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.39);
+    top: -69px;
+}
+
+.movieInformation{
+    display: flex;
+    flex-direction: column;
+}
