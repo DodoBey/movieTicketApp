@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
 import MoviesComponent from './MoviesComponent';
 import './MovieList.css';
+import Modal from "./Modal";
 
 const MovieList = (props) => {
 
@@ -15,7 +16,7 @@ const MovieList = (props) => {
     const [rate, setRate] = useState("");
     const [image, setImage] = useState("");
     const [imdbid, setImdbid] = useState("");
-    const [data, setData] = useState("");
+    const [data, setData] = useState([]);
 
     //API URL and KEY
     const api = {
@@ -50,7 +51,7 @@ const MovieList = (props) => {
     // Map method to divide data as a part
     const film = data.map(movie => {
         return (
-
+            <>
             <MovieCard
                 key={movie.id}
                 title={movie.title}
@@ -60,6 +61,16 @@ const MovieList = (props) => {
                 rate={movie.vote_average}
                 image={movie.poster_path}
             />
+            <Modal
+                key={movie.id}
+                title={movie.title}
+                genres={movie.genre_ids}
+                release={movie.release_date}
+                sum={movie.overview}
+                rate={movie.vote_average}
+                image={movie.poster_path}
+            />
+            </>
         );
     });
 

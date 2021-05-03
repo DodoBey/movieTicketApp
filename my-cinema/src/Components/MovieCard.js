@@ -1,4 +1,6 @@
 import './MovieCard.css';
+import useModal from './UseModal';
+import Modal from "./Modal";
 
 const MovieCard = (props) => {
     const duration = () => {
@@ -13,18 +15,24 @@ const MovieCard = (props) => {
         return (imgUrl + imagePath)
     }
 
+    const { isShowing, toggle } = useModal();
+
     return (
         <>
             <div className="movieCard">
-                <div className="moviePoster"><img src={imgUrl()} alt="" /></div>
+                <div className="moviePoster"><img onClick={toggle} src={imgUrl()} alt="" /></div>
+                <Modal
+                    isShowing={isShowing}
+                    hide={toggle}
+                />
                 <div className="movieBanner">
                     <div className="movieInformation">
                         <div className="movieTitle">
-                        <span>{props.title}</span>
+                            {/* <span>{props.title}</span> */}
                         </div>
                         <div className="movieType">
-                        <span>{props.type}</span>
-                        <span>{props.rate}</span>
+                            {/* <span>{props.type}</span>
+                        <span>{props.rate}</span> */}
                         </div>
                     </div>
                 </div>
