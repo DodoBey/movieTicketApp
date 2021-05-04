@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
-import MoviesComponent from './MoviesComponent';
 import './MovieList.css';
 import Modal from "./Modal";
 
@@ -46,7 +45,6 @@ const MovieList = (props) => {
     }
 
     useEffect( () => FetchData(), []);
-    console.log(data);
 
     // Map method to divide data as a part
     const film = data.map(movie => {

@@ -1,0 +1,8 @@
+.allModal{
+    z-index: 100;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
