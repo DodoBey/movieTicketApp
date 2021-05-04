@@ -21,9 +21,16 @@ const MovieCard = (props) => {
         <>
             <div className="movieCard">
                 <div className="moviePoster"><img onClick={toggle} src={imgUrl()} alt="" /></div>
-                <Modal
+                <Modal 
                     isShowing={isShowing}
                     hide={toggle}
+                    key={props.key}
+                    title={props.title}
+                    genres={props.genres}
+                    release={props.release}
+                    sum={props.sum}
+                    rate={props.rate}
+                    image={imgUrl()}
                 />
                 <div className="movieBanner">
                     <div className="movieInformation">

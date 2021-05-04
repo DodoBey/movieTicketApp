@@ -1,7 +1,10 @@
+import Warn from "../Images/warn.png";
+import "./Banner.css";
+
 const Banner = () => {
     return (
-        <div>
-            
+        <div className="bannerArea">
+            <img src={Warn} alt=""/>
         </div>
     )
 }

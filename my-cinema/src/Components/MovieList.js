@@ -48,18 +48,10 @@ const MovieList = (props) => {
 
     // Map method to divide data as a part
     const film = data.map(movie => {
+        console.log(movie.overview)
         return (
             <>
             <MovieCard
-                key={movie.id}
-                title={movie.title}
-                genres={movie.genre_ids}
-                release={movie.release_date}
-                sum={movie.overview}
-                rate={movie.vote_average}
-                image={movie.poster_path}
-            />
-            <Modal
                 key={movie.id}
                 title={movie.title}
                 genres={movie.genre_ids}
