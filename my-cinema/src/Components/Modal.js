@@ -6,7 +6,7 @@ const Modal = (props) => props.isShowing ? ReactDOM.createPortal(
   <>
     <div onClick={props.isShowing} className="allModal">
       <div><p>{props.title}</p></div>
-      <div><p>{props.sum}</p></div>
+      <div><p>{props.id}</p></div>
       <div><img src={props.image} alt=""/></div>
     </div>
   </>, document.body

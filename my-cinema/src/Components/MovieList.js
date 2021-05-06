@@ -16,14 +16,16 @@ const MovieList = (props) => {
     const [image, setImage] = useState("");
     const [imdbid, setImdbid] = useState("");
     const [data, setData] = useState([]);
+    // const [extraMovieData, setExtraMovieData] = useState([]);
 
     //API URL and KEY
     const api = {
         mainUrl: "https://api.themoviedb.org/3/movie/now_playing?api_key=",
+        secondUrl: "https://api.themoviedb.org/3/movie/",
         key: 'd8e889e21e38c8a7c1d98ed873f30f19'
     }
 
-    //Fetch API
+    //Fetch API for Now Playing
     const FetchData = () => {
         fetch(`${api.mainUrl}${api.key}`).then(response => {
             if (response.status !== 200) {
@@ -43,16 +45,30 @@ const MovieList = (props) => {
                 })
         })
     }
+    //Fetch API for Extra Information
+    // const FetchExtraData = () => {
+    //     fetch(`${api.secondUrl}${key}?api_key=${api.key}`).then(response => {
+    //         if (response.status !== 200){
+    //             console.log(`We cannot react the extra movie database! Problem : ${response.status}`)
+    //         }
+    //         response.json().then(extraData => {
+
+    //         })
+    //         .catch(error => {
+    //             console.log(`Error ${error}`)
+    //         })
+    //     })
+
+    // }
 
     useEffect( () => FetchData(), []);
 
     // Map method to divide data as a part
     const film = data.map(movie => {
-        console.log(movie.overview)
         return (
             <>
             <MovieCard
-                key={movie.id}
+                id={movie.id}
                 title={movie.title}
                 genres={movie.genre_ids}
                 release={movie.release_date}

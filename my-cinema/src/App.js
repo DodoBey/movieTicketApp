@@ -11,7 +11,6 @@ function App() {
     <NavBar/>
     <Banner/>
     <MoviesComponent/>
-    <Seat/>
     </div>
   );
 }
