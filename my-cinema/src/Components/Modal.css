@@ -1,8 +1,47 @@
-.allModal{
+.allModal {
     z-index: 100;
-    background-color: white;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-color: rgb(255, 255, 255, 0.95);
+    width: 75%;
+    position: fixed;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 15px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 15px 1000px rgba(0, 0, 0, 0.5);
+    opacity:1;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.allModal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.allModal img {
+    width: 50%;
+    border-radius: 4px;
+}
+
+.leftGrid {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.leftGrid span {
+    display: block;
+}
+
+.rightGrid {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
 }

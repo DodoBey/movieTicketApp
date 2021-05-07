@@ -65,7 +65,6 @@ const MovieCard = (props) => {
         })
     }
 
-    console.log(genres)
 
     // Duration Converter Function
     const durationConverter = () => {
@@ -94,7 +93,7 @@ const MovieCard = (props) => {
         }
     };
 
-    
+
     // First 5 Data of Cast Info and Map Array of Starring
     const cast = extraMovieData.slice(0, 5);
     const starringInfo = [];
@@ -109,21 +108,21 @@ const MovieCard = (props) => {
     const starringName = starringInfo.toString();
 
     //Trailer URL
-    const trailerUrl= `https://www.youtube.com/embed/${trailer}`
+    const trailerUrl = `https://www.youtube.com/embed/${trailer}`
 
     //IMDB Url
-    const imdbUrl= `https://www.imdb.com/title/${imdbId}/`
+    const imdbUrl = `https://www.imdb.com/title/${imdbId}/`
 
-    const genreName=[];
-    const genreId=[];
+    const genreName = [];
+    const genreId = [];
     //Genres Map
-    const movieGenres = genres.map(genre =>{ 
+    const movieGenres = genres.map(genre => {
         return (
-           genreName.push(genre.name),
-           genreId.push(genre.id)
-           )
+            genreName.push(genre.name),
+            genreId.push(genre.id)
+        )
     });
-    
+
     const genreInfo = genreName.toString();
     return (
         <>

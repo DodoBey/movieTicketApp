@@ -15,7 +15,7 @@ const Modal = (props) => props.isShowing ? ReactDOM.createPortal(
         <span>MovieDB Rate: {props.rate}</span>
       </div>
       <div className="rightGrid">
-        <div><iframe width="560" height="315" src={props.trailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
+        <div><iframe width="100%" height="300vw" src={props.trailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
         <p>{props.sum}</p>
         <div>
           <a href={props.imdbId} target="_blank">
