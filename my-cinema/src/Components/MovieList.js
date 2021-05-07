@@ -1,22 +1,11 @@
 import { useState, useEffect } from 'react';
 import MovieCard from './MovieCard';
 import './MovieList.css';
-import Modal from "./Modal";
 
 const MovieList = (props) => {
 
     // Setting the data
-    const [key, setKey] = useState("");
-    const [title, setTitle] = useState("");
-    const [duration, setDuration] = useState("");
-    const [genres, setGenres] = useState("");
-    const [release, setRelease] = useState("");
-    const [sum, setSum] = useState("")
-    const [rate, setRate] = useState("");
-    const [image, setImage] = useState("");
-    const [imdbid, setImdbid] = useState("");
     const [data, setData] = useState([]);
-    // const [extraMovieData, setExtraMovieData] = useState([]);
 
     //API URL and KEY
     const api = {
@@ -33,39 +22,20 @@ const MovieList = (props) => {
             }
             response.json().then(movieData => {
                 setData(movieData.results);
-                // setKey(movieData.results.id);
-                // setTitle(movieData.results.original_title);
-                // setGenres(movieData.results.genre_ids);
-                // setRelease(movieData.results.release_date);
-                // setRate(movieData.results.vote_average);
-                // setImage(movieData.results.poster_path);
+
             })
                 .catch(err => {
                     console.log(`error ${err}`)
                 })
         })
     }
-    //Fetch API for Extra Information
-    // const FetchExtraData = () => {
-    //     fetch(`${api.secondUrl}${key}?api_key=${api.key}`).then(response => {
-    //         if (response.status !== 200){
-    //             console.log(`We cannot react the extra movie database! Problem : ${response.status}`)
-    //         }
-    //         response.json().then(extraData => {
-
-    //         })
-    //         .catch(error => {
-    //             console.log(`Error ${error}`)
-    //         })
-    //     })
-
-    // }
 
     useEffect( () => FetchData(), []);
 
     // Map method to divide data as a part
     const film = data.map(movie => {
         return (
+
             <>
             <MovieCard
                 id={movie.id}

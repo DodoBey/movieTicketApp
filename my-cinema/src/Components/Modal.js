@@ -5,9 +5,28 @@ import './Modal.css'
 const Modal = (props) => props.isShowing ? ReactDOM.createPortal(
   <>
     <div onClick={props.isShowing} className="allModal">
-      <div><p>{props.title}</p></div>
-      <div><p>{props.id}</p></div>
-      <div><img src={props.image} alt=""/></div>
+      <div className="leftGrid">
+        <h3>{props.title}</h3>
+        <h6 id={props.genresId}>{props.genres}</h6>
+        <img src={props.image} alt="" />
+        <span id={props.starringId}>Starring: {props.starring}</span>
+        <span>Duration: {props.duration}</span>
+        <span>Release Date: {props.release}</span>
+        <span>MovieDB Rate: {props.rate}</span>
+      </div>
+      <div className="rightGrid">
+        <div><iframe width="560" height="315" src={props.trailer} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
+        <p>{props.sum}</p>
+        <div>
+          <a href={props.imdbId} target="_blank">
+            <button>
+              IMDB
+          </button></a>
+          <button>
+            Book a Ticket
+          </button>
+        </div>
+      </div>
     </div>
   </>, document.body
 ) : null;
