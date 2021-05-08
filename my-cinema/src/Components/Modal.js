@@ -4,11 +4,10 @@ import './Modal.css'
 
 const Modal = (props) => props.isShowing ? ReactDOM.createPortal(
   <>
-    <div onClick={props.isShowing} className="allModal">
+    <div style={{ background: `url(${props.image})`}} onClick={props.isShowing} className="allModal">
       <div className="leftGrid">
         <h3>{props.title}</h3>
         <h6 id={props.genresId}>{props.genres}</h6>
-        <img src={props.image} alt="" />
         <span id={props.starringId}>Starring: {props.starring}</span>
         <span>Duration: {props.duration}</span>
         <span>Release Date: {props.release}</span>

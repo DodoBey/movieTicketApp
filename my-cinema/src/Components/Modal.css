@@ -1,6 +1,5 @@
 .allModal {
     z-index: 100;
-    background-color: rgb(255, 255, 255, 0.95);
     width: 75%;
     position: fixed;
     float: left;
@@ -18,16 +17,20 @@
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important; 
+    opacity: 1;
 }
 .allModal:target {
     opacity:1;
     pointer-events: auto;
 }
 
-.allModal img {
+/* .allModal img {
     width: 50%;
     border-radius: 4px;
-}
+} */
 
 .leftGrid {
     width: 80%;
