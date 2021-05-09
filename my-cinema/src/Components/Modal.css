@@ -1,5 +1,4 @@
-.allModal {
-    z-index: 100;
+.allModal { 
     width: 75%;
     position: fixed;
     float: left;
@@ -10,17 +9,23 @@
     display: grid;
     grid-template-columns: auto auto auto;
     border-radius: 10px;
-    -webkit-box-shadow: 5px 5px 15px 25px rgba(0, 0, 0, 0.5);
-    box-shadow: 5px 5px 15px 1000px rgba(0, 0, 0, 0.5);
-    opacity:1;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
-    pointer-events: none;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important; 
     opacity: 1;
+}
+
+.bgModal {
+    width: 100%;
+    height: 3000px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top:0;
+    left: 0;
+    
 }
 .allModal:target {
     opacity:1;
