@@ -7,10 +7,10 @@ Online cinema ticket application, stil in progress. Need to install node modules
 - CSS
 
 # To do list:
-- Create banner/navbar etc.
+- Create banner/navbar etc. :ballot_box_with_check:
 - Create seat component
 - Create side-bar component
-- Create pop-up/modal component
+- Create pop-up/modal component :ballot_box_with_check:
 - Create different screens for different movies (3D, IMAX, UltraAV etc.)
 - Create different seats plan for each screen
 
