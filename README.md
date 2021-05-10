@@ -15,7 +15,7 @@ Online cinema ticket application, stil in progress. Need to install node modules
 - Create different seats plan for each screen
 
 # Extras:
-- Find a way to reach the trailer
+- Find a way to reach the trailer :white_check_mark:
 - Add filter for genres
-- Find a way to reach director, starring, duration information for movie
+- Find a way to reach director, starring, duration information for movie :white_check_mark:
 - Try to fetch imdb rate by using imdbid
