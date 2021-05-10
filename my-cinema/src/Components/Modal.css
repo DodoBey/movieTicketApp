@@ -1,55 +1,94 @@
+
 .allModal { 
-    width: 75%;
+    width: 85%;
     position: fixed;
-    float: left;
+    max-height: 80%;
+    height: fit-content;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: black;
-    display: grid;
-    grid-template-columns: auto auto auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
-    transition: opacity 400ms ease-in;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important; 
     opacity: 1;
+    overflow: auto;  
+}
+
+.bg-define{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
 }
 
 .bgModal {
     width: 100%;
-    height: 3000px;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    top:0;
-    left: 0;
-    
-}
-.allModal:target {
-    opacity:1;
-    pointer-events: auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* .allModal img {
-    width: 50%;
-    border-radius: 4px;
-} */
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
 
-.leftGrid {
+.title h6{
+    font-size: 15px;
+}
+
+.trailer{
     width: 80%;
     margin: 10px auto;
 }
 
-.leftGrid span {
-    display: block;
+.modal-info{
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(129, 129, 129, 0.205);
+    border-radius: 10px;
 }
 
-.rightGrid {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
-    padding: 20px;
+.modal-info p{
+    max-height: 80%;
+    padding: 5px;
+}
+
+
+.modal-info span{
+    display: block;
+    padding: 5px;
+}
+
+.modal-buttons{
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.modal-buttons button{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgba(129, 129, 129, 0.75);
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.modal-buttons button:hover{
+    background-color: rgba(0, 0, 0, 0.75);
+    transform: scale(1.1);
+    transition: .5s ease;
 }

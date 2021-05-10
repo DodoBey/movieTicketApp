@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './MovieCard.css';
 import Modal from "./Modal";
+import SideBar from './SideBar';
+
 
 // Create Global Variable
 const MovieCard = (props) => {
@@ -126,33 +128,38 @@ const MovieCard = (props) => {
     const genreInfo = genreName.toString();
     return (
         <>
-            <div className="movieCard">
-                <div className="moviePoster"><img onClick={toggle} src={imgUrl()} alt="" /></div>
-                <Modal
-                    isShowing={isShowing}
-                    hide={toggle}
-                    title={props.title}
-                    genres={genreInfo}
-                    genresId={genreId}
-                    release={props.release}
-                    sum={props.sum}
-                    rate={props.rate}
-                    image={imgUrl()}
-                    duration={durationConverter()}
-                    imdbId={imdbUrl}
-                    starring={starringName}
-                    starringId={starringId}
-                    trailer={trailerUrl}
-                />
-                <div className="movieBanner">
-                    <div className="movieInformation">
-                        <div className="movieTitle">
-                        </div>
-                        <div className="movieType">
+            <>
+                <div className="movieCard">
+                    <div className="moviePoster"><img onClick={toggle} src={imgUrl()} alt="" /></div>
+                    <Modal
+                        isShowing={isShowing}
+                        hide={toggle}
+                        title={props.title}
+                        genres={genreInfo}
+                        genresId={genreId}
+                        release={props.release}
+                        sum={props.sum}
+                        rate={props.rate}
+                        image={imgUrl()}
+                        duration={durationConverter()}
+                        imdbId={imdbUrl}
+                        starring={starringName}
+                        starringId={starringId}
+                        trailer={trailerUrl}
+                    />
+                    <div className="movieBanner">
+                        <div className="movieInformation">
+                            <div className="movieTitle">
+                            </div>
+                            <div className="movieType">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </>
+            {/* <SideBar
+                title={props.title}
+            /> */}
         </>
     );
 }

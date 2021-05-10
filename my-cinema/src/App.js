@@ -10,6 +10,7 @@ function App() {
     <div className="all">
     <NavBar/>
     <Banner/>
+    <h1 className="nowPlayingTitle">Now Playing</h1>
     <MoviesComponent/>
     </div>
   );
